@@ -5,7 +5,7 @@ BEGIN
     -- Check if login attempts exceed the threshold
     IF NEW.login_attempts >= 2 THEN
         -- Set blocked_until to 24 hours from now
-        NEW.blocked_until := NOW() + INTERVAL '1 minute';
+        NEW.blocked_until := NOW() + INTERVAL '24 hours';
     END IF;
     RETURN NEW;
 END;

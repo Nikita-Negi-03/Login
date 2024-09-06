@@ -1,11 +1,10 @@
 import React from 'react';
-import LoginForm from './components/LoginForm';
+import MainComp from './components/mainComp';
 
 function App() {
   return (
     <div className="App">
-      <h1>User Login</h1>
-      <LoginForm />
+      <MainComp />
     </div>
   );
 }
