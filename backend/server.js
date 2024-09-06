@@ -48,7 +48,7 @@ app.post('/login', async (req, res) => {
             // Check if the user should be blocked
             const updateBlockedUntilQuery = `
                 UPDATE users 
-                SET blocked_until = NOW() + INTERVAL '5 minute' 
+                SET blocked_until = NOW() + INTERVAL '24 hours' 
                 WHERE login_attempts >= 2 AND id = $1
             `;
             await db.query(updateBlockedUntilQuery, [user.id]);
