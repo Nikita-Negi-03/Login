@@ -1,0 +1,8 @@
+# Ignore environment variables
+.env
+
+# Ignore the lock file for npm packages
+package-lock.json
+
+# Ignore node modules
+node_modules/
